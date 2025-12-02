@@ -28,6 +28,22 @@ main {
   padding: 100px, 0, 100px, 0;
 }
 
+.contact{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 0 20px 0;
+  background-color: #4B9CD3;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.form-box{
+  border: 2px solid #151515;
+  border-radius: 4px;
+}
+
 #contact-form{
     width: 90%;
     gap: 10px;
@@ -40,19 +56,26 @@ main {
 input[type=text], input[type=email] {
   padding: 12px; 
   font-size: 1em; 
-  border: 1px solid #ccc;
+  border: 2px solid #151515;
   border-radius: 4px;
   height: 35px;
   box-sizing: border-box;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type=text]:hover, input[type=email]:hover {
-  border-color: #67909C;
+textarea{
+  font-size: 1em;
+  border: 2px solid #151515;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type=text]:focus, input[type=email]:focus {
-  border-color: #877664; 
+input[type=text]:hover, input[type=email]:hover, textarea:hover {
+  border-color: #4B9CD3;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus {
+  border-color: #4B9CD3; 
   outline: none; 
 }
 
@@ -61,10 +84,27 @@ button[type=submit]{
     overflow: hidden;
     background-color: #4B9CD3;
     font-size: 1rem;
-    text-transform: lowercase;
     font-family: "Montserrat", sans-serif;
     padding: 10px 20px;
     margin-top: 10px;
-    border-radius: 1px;
+    border-radius: 4px;
     color: white;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color .3s ease;
+}
+
+button[type=submit]:hover {
+    opacity: 50%;
+    color: #151515;
+    border: 2px solid #13294B;
+}
+
+.return{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 0 20px 0;
+  background-color: #4B9CD3;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
 }
