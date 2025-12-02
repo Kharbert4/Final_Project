@@ -28,7 +28,7 @@ main {
   padding: 100px, 0, 100px, 0;
 }
 
-.contact{
+.title{
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -112,4 +112,72 @@ button[type=submit]:hover {
 .return a{
   text-decoration: none;
   color: white;
+}
+
+.return a:hover{
+  text-decoration: underline;
+}
+
+.return a:focus{
+  text-decoration: underline;
+}
+
+
+.hours-box{
+  width: 75%;
+  height: 75%;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px solid #151515;
+  border-radius: 4px;
+}
+
+.hours-box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  list-style-type: none;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  max-height: 20px;
+  height: 20px;
+  border-top: 2px solid #151515;
+}
+
+.contact-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  margin: 20px 0 20px 0;
+  background-color: #4B9CD3;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.contact-button a{
+  text-decoration: none;
+  color:white
+}
+
+.contact-button a:hover{
+  text-decoration: underline;
+}
+
+.contact-button a:focus{
+  text-decoration: underline;
+}
+
+.icon img {
+  transform: scale(0.5);
+  align-items: center;
 }
