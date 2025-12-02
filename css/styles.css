@@ -222,6 +222,11 @@ h2{
   justify-content: center;
 }
 
+.clothing-item img{
+  width: 100%;
+  height: 200px;
+}
+
 .clothing-info ul{
   list-style-type: none;
   display: grid;
