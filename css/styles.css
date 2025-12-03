@@ -3,7 +3,6 @@ header {
   font-weight: bold;
   text-align: center;
   border-bottom: 2px solid black;
-  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -62,35 +61,35 @@ main {
   height: auto;
 }
 
-.title{
+.title {
   display: flex;
   justify-content: center;
   padding: 30px;
   margin: 20px 0 20px 0;
-  background-color: #4B9CD3;
+  background-color: #4b9cd3;
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
-  font-family: "Roboto", sans-serif;
 }
 
-.form-box{
+.form-box {
   border: 2px solid #151515;
   border-radius: 4px;
 }
 
-#contact-form{
-    width: 90%;
-    gap: 10px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
+#contact-form {
+  width: 90%;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
 }
- 
-input[type=text], input[type=email] {
-  padding: 12px; 
-  font-size: 1em; 
+
+input[type="text"],
+input[type="email"] {
+  padding: 12px;
+  font-size: 1em;
   border: 2px solid #151515;
   border-radius: 4px;
   height: 35px;
@@ -98,67 +97,70 @@ input[type=text], input[type=email] {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea{
+textarea {
   font-size: 1em;
   border: 2px solid #151515;
   border-radius: 4px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-input[type=text]:hover, input[type=email]:hover, textarea:hover {
-  border-color: #4B9CD3;
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-color: #4b9cd3;
 }
 
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
-  border-color: #4B9CD3; 
-  outline: none; 
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #4b9cd3;
+  outline: none;
 }
 
-button[type=submit]{
-    position: relative;
-    overflow: hidden;
-    background-color: #4B9CD3;
-    font-size: 1rem;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 4px;
-    color: white;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color .3s ease;
+button[type="submit"] {
+  position: relative;
+  overflow: hidden;
+  background-color: #4b9cd3;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
-button[type=submit]:hover {
-    opacity: 50%;
-    color: #151515;
-    border: 2px solid #13294B;
+button[type="submit"]:hover {
+  opacity: 50%;
+  color: #151515;
+  border: 2px solid #13294b;
 }
 
-.return{
+.return {
   display: flex;
   justify-content: center;
   padding: 30px;
   margin: 20px 0 20px 0;
-  background-color: #4B9CD3;
+  background-color: #4b9cd3;
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
-  
 }
 
-.return a{
+.return a {
   text-decoration: none;
   color: white;
 }
 
-.return a:hover{
+.return a:hover {
   text-decoration: underline;
 }
 
-.return a:focus{
+.return a:focus {
   text-decoration: underline;
 }
 
-
-.hours-box{
+.hours-box {
   width: 75%;
   height: 75%;
   gap: 10px;
@@ -170,7 +172,7 @@ button[type=submit]:hover {
   border-radius: 4px;
 }
 
-.hours-box ul{
+.hours-box ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -178,13 +180,7 @@ button[type=submit]:hover {
   list-style-type: none;
 }
 
-@media screen and (min-width: 768px) {
-  .hours-box{
-    font-size: 2rem;
-  }
-}
-
-footer{
+footer {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: auto;
@@ -193,29 +189,28 @@ footer{
   border-top: 2px solid #151515;
 }
 
-.contact-button{
+.contact-button {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50%;
   margin: 20px 0 20px 0;
-  background-color: #4B9CD3;
+  background-color: #4b9cd3;
   border-radius: 10px;
   font-size: 1rem;
   color: white;
 }
 
-.contact-button a{
+.contact-button a {
   text-decoration: none;
-  color:white;
-  font-size: 2em;
+  color:white
 }
 
-.contact-button a:hover{
+.contact-button a:hover {
   text-decoration: underline;
 }
 
-.contact-button a:focus{
+.contact-button a:focus {
   text-decoration: underline;
 }
 
@@ -224,64 +219,64 @@ footer{
   align-items: center;
 }
 
-.browse-box{
+.browse-box {
   display: grid;
   border: 2px solid #151515;
   border-radius: 4px;
   grid-template-rows: 1fr 9fr;
 }
 
-h2{
+h2 {
   text-align: center;
   border-bottom: 2px solid #151515;
   color: #151515;
 }
 
-.item-grid{
+.item-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
-.item-grid img{
+.item-grid img {
   width: 100%;
-  height: 200px;     
+  height: 200px;
   border-radius: 4px;
-  scale: .9;
-  transition: .5s;
+  scale: 0.9;
+  transition: 0.5s;
 }
 
-.item-grid img:hover{
+.item-grid img:hover {
   transform: scale(1.1);
 }
 
-.clothing-box{
+.clothing-box {
   display: grid;
-  grid-template-rows: 2fr 1fr ;
+  grid-template-rows: 2fr 1fr;
   grid-template-columns: 1fr;
 }
-.clothing-item{
+.clothing-item {
   display: grid;
   justify-content: center;
 }
 
-.clothing-item img{
+.clothing-item img {
   width: 100%;
   height: 200px;
 }
 
-.clothing-info ul{
+.clothing-info ul {
   list-style-type: none;
   display: grid;
   justify-content: center;
   line-height: 1.5;
   text-align: center;
 }
-.wishlist{
+.wishlist {
   display: flex;
   justify-content: center;
   padding: 30px;
   margin: 20px 0 20px 0;
-  background-color: #4B9CD3;
+  background-color: #4b9cd3;
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;

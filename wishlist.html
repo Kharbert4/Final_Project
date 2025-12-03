@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
-</head>
-<body>
-        
+  </head>
+  <body>
     <header>
-        <h1>Old Well Wear</h1>
+      <h1>Old Well Wear</h1>
     </header>
 
-    <div class="title">
-        My Wish List
+    <div class="title">My Wish List</div>
+    
+    <div class="clear-button-container">
+      <button id="clear-wishlist-btn">Clear Wish List</button>
     </div>
 
-    <div class="wishlist-container">
-    </div>
+    <div class="wishlist-container"></div>
 
     <div class="return">
-      <a href="index.html">Return Home</a> 
+      <a href="index.html">Return Home</a>
     </div>
 
     <footer>
-        <div class="contact-button">
-            <a href="contact.html">Contact Us</a>
-        </div>
-        <Div class="icon"><img src="imgs/Old Well Icon.png" alt="Old Well Icon" /></Div>
+      <div class="contact-button">
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="icon">
+        <img src="imgs/Old Well Icon.png" alt="Old Well Icon" />
+      </div>
     </footer>
 
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const wishlistContainer = document.querySelector('.wishlist-container');
-            const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const wishlistContainer = document.querySelector(".wishlist-container");
+        const clearButton = document.getElementById("clear-wishlist-btn");
 
-            if (wishlist.length === 0) {
-                wishlistContainer.innerHTML = '<p>Your wish list is currently empty. Start browsing to add items!</p>';
-                return;
-            }
+        /**
+         * Renders the current wishlist items from localStorage to the page.
+         */
+        function renderWishlist() {
+          // Clear any existing content
+          wishlistContainer.innerHTML = "";
+          const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
-            wishlist.forEach(item => {
-                const itemDiv = document.createElement('div');
-                itemDiv.classList.add('wishlist-item');
-                
-                // You would need to add CSS to style this nicely
-                itemDiv.innerHTML = `
-                    <div class="item-details">
-                        <img src="${item.imgSrc}" alt="${item.name}" style="width: 100px; height: auto;">
-                        <p><strong>${item.name}</strong></p>
-                        <p>${item.price}</p>
-                    </div>
-                `;
-                wishlistContainer.appendChild(itemDiv);
-            });
+          if (wishlist.length === 0) {
+            wishlistContainer.innerHTML =
+              "<p>Your wish list is currently empty. Start browsing to add items!</p>";
+            // Hide the clear button if the list is empty
+            clearButton.style.display = "none";
+            return;
+          }
+
+          // Show the clear button if items exist
+          clearButton.style.display = "block";
+
+          wishlist.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("wishlist-item");
+
+            itemDiv.innerHTML = `
+                        <div class="item-details" style="display: flex; align-items: center; gap: 20px; border-bottom: 1px solid #ccc; padding: 10px;">
+                            <img src="${item.imgSrc}" alt="${item.name}" style="width: 80px; height: auto; border: 1px solid #eee;">
+                            <div>
+                                <p style="margin: 0;"><strong>${item.name}</strong></p>
+                                <p style="margin: 0; color: #cc0000;">${item.price}</p>
+                            </div>
+                        </div>
+                    `;
+            wishlistContainer.appendChild(itemDiv);
+          });
+        }
+
+        /**
+         * Clears the wishlist from localStorage and re-renders the page.
+         */
+        function clearWishlist() {
+          localStorage.removeItem("wishlist");
+          renderWishlist();
+        }
+
+        // Initial rendering of the wishlist on page load
+        renderWishlist();
+
+        // Event listener for the clear button
+        clearButton.addEventListener("click", () => {
+          // Optional: add a confirmation
+          if (
+            confirm("Are you sure you want to clear your entire wish list?")
+          ) {
+            clearWishlist();
+          }
         });
+      });
     </script>
-</body>
+  </body>
 </html>
