@@ -1,5 +1,6 @@
 header {
   font-size: 2em;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-align: center;
   border-bottom: 2px solid black;
@@ -26,15 +27,14 @@ main {
   margin-top: 5%;
   align-self: center;
   justify-self: center;
-  width: 75%;
-  
+  width: 80%;
 }
 .navbar a {
   justify-content: center;
   align-items: center;
   padding: 100px, 0, 100px, 0;
-  margin: 100px, 0, 100px, 0;
-  font-size: 1.5rem;
+  margin: 100px, 0, 85px, 0;
+  font-size: 32px;
   color: white;
   text-decoration: none;
 }
@@ -101,7 +101,7 @@ main {
   margin: 20px 0 20px 0;
   background-color: #4b9cd3;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 48px;
   color: white;
   font-family: "Roboto", sans-serif;
 }
@@ -123,7 +123,8 @@ main {
 input[type="text"],
 input[type="email"] {
   padding: 12px;
-  font-size: 1em;
+  font-size: 18px;
+  font-family: "lato", sans-serif;
   border: 2px solid #151515;
   border-radius: 4px;
   height: 35px;
@@ -132,7 +133,8 @@ input[type="email"] {
 }
 
 textarea {
-  font-size: 1em;
+  font-size: 18px;
+  font-family: "lato", sans-serif;
   border: 2px solid #151515;
   border-radius: 4px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -155,19 +157,26 @@ button[type="submit"] {
   position: relative;
   overflow: hidden;
   background-color: #4b9cd3;
-  font-size: 1rem;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
   padding: 10px 20px;
   margin-top: 10px;
   border-radius: 4px;
   color: white;
   transition: border-color 0.3s ease, box-shadow 0.3s ease,
-    background-color 0.3s ease;
+    opacity 0.3s ease;
 }
 
 button[type="submit"]:hover {
   opacity: 50%;
   color: #151515;
-  border: 2px solid #13294b;
+  border: 2px solid #151515;
+}
+
+button[type="submit"]:focus {
+  opacity: 50%;
+  color: #151515;
+  border: 2px solid #151515;
 }
 
 .return {
@@ -177,8 +186,9 @@ button[type="submit"]:hover {
   margin: 20px 0 20px 0;
   background-color: #4b9cd3;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 32px;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .return a {
@@ -213,6 +223,8 @@ button[type="submit"]:hover {
   text-align: center;
   list-style-type: none;
   line-height: 5;
+  font-size: 18px;
+  font-family: "lato", sans-serif;
 }
 
 footer {
@@ -360,8 +372,16 @@ h2 {
   margin: 20px 0 20px 0;
   background-color: #4b9cd3;
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
   color: white;
+}
+
+.wishlist a{
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
 }
 
 .wishlist:hover{
@@ -381,6 +401,8 @@ h2 {
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 #clear-wishlist-btn:hover{
