@@ -3,6 +3,7 @@ header {
   font-weight: bold;
   text-align: center;
   border-bottom: 2px solid black;
+  font-family: "Roboto", sans-serif;
 }
 
 main {
@@ -37,6 +38,7 @@ main {
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-box{
@@ -141,6 +143,12 @@ button[type=submit]:hover {
   justify-content: space-around;
   text-align: center;
   list-style-type: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hours-box{
+    font-size: 2rem;
+  }
 }
 
 footer{
