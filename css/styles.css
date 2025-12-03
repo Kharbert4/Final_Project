@@ -57,9 +57,32 @@ main {
 .main-image img{
   display: flex;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 10px;
   width: 98%;
   height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+  }
+
+  .navbar{
+    margin: 0
+  }
+
+  .main-image img{
+    width: 75%;
+    height: auto;
+  }
+
+  header{
+    font-size: 56px;
+  }
+
+  
 }
 
 .title {
@@ -71,6 +94,7 @@ main {
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-box {
@@ -139,7 +163,7 @@ button[type="submit"]:hover {
 
 .return {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding: 30px;
   margin: 20px 0 20px 0;
   background-color: #4b9cd3;
@@ -163,7 +187,7 @@ button[type="submit"]:hover {
 
 .hours-box {
   width: 75%;
-  height: 75%;
+  height: 100%;
   gap: 10px;
   margin: 0 auto;
   padding: 20px;
@@ -179,6 +203,7 @@ button[type="submit"]:hover {
   justify-content: space-around;
   text-align: center;
   list-style-type: none;
+  line-height: 5;
 }
 
 footer {
@@ -195,10 +220,11 @@ footer {
   justify-content: center;
   align-items: center;
   height: 50%;
-  margin: 20px 0 20px 0;
+  width: 80%;
+  margin: 30px 0 20px 50px;
   background-color: #4b9cd3;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 2rem;
   color: white;
 }
 
@@ -248,6 +274,23 @@ h2 {
 
 .item-grid img:hover {
   transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  
+
+  .browse-box .item-grid img{
+    width: 500px;
+    height: auto;
+  }
+  .browse-box{
+  width: 75%;
+  margin: 0 auto;
+  }
+
+  h2{
+    font-size: 36px;
+  }
 }
 
 .clothing-box {
