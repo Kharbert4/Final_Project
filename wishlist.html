@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+        
+    <header>
+        <h1>Old Well Wear</h1>
+    </header>
+
+    <div class="title">
+        My Wish List
+    </div>
+
+    <div class="wishlist-container">
+    </div>
+
+    <div class="return">
+      <a href="index.html">Return Home</a> 
+    </div>
+
+    <footer>
+        <div class="contact-button">
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <Div class="icon"><img src="imgs/Old Well Icon.png" alt="Old Well Icon" /></Div>
+    </footer>
+
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wishlistContainer = document.querySelector('.wishlist-container');
+            const wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]');
+
+            if (wishlist.length === 0) {
+                wishlistContainer.innerHTML = '<p>Your wish list is currently empty. Start browsing to add items!</p>';
+                return;
+            }
+
+            wishlist.forEach(item => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('wishlist-item');
+                
+                // You would need to add CSS to style this nicely
+                itemDiv.innerHTML = `
+                    <div class="item-details">
+                        <img src="${item.imgSrc}" alt="${item.name}" style="width: 100px; height: auto;">
+                        <p><strong>${item.name}</strong></p>
+                        <p>${item.price}</p>
+                    </div>
+                `;
+                wishlistContainer.appendChild(itemDiv);
+            });
+        });
+    </script>
+</body>
+</html>
