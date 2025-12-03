@@ -17,16 +17,49 @@ main {
   margin-top: 5%;
   align-self: center;
   justify-self: center;
-  border: 5px solid green;
+  width: 75%;
+  
 }
 .navbar a {
   justify-content: center;
   align-items: center;
   padding: 100px, 0, 100px, 0;
   margin: 100px, 0, 100px, 0;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
 }
 .navbar li {
-  padding: 100px, 0, 100px, 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 0 20px 0;
+  background-color: #4B9CD3;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar a:hover{
+  text-decoration: underline;
+}
+
+.navbar a:focus{
+  text-decoration: underline;
+}
+.main-image{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.main-image img{
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  width: 98%;
+  height: auto;
 }
 
 .title{
@@ -174,7 +207,8 @@ footer{
 
 .contact-button a{
   text-decoration: none;
-  color:white
+  color:white;
+  font-size: 2em;
 }
 
 .contact-button a:hover{
