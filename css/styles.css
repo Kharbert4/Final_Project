@@ -92,7 +92,6 @@ main {
     font-size: 56px;
   }
 
-  
 }
 
 .title {
@@ -325,6 +324,35 @@ h2 {
   line-height: 1.5;
   text-align: center;
 }
+
+@media screen and (min-width: 768px) {
+  .clothing-item{
+    display: grid;
+    grid-area: item;
+    margin:10% 0 15% 50%;
+}
+
+.clothing-item img{
+  height: 400px;
+  width: auto;
+}
+
+.clothing-info{
+  display: grid;
+  grid-area:info;
+  margin: 40% 50% 25% 0; 
+  font-family: "lato", sans-serif;
+  font-size: 24px;
+}
+
+.clothing-box{
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "item info"
+  "item info";
+}
+}
+
 .wishlist {
   display: flex;
   justify-content: center;
@@ -336,6 +364,14 @@ h2 {
   color: white;
 }
 
+.wishlist:hover{
+  text-decoration: underline;
+}
+
+.wishlist:focus{
+  text-decoration: underline;
+}
+
 #clear-wishlist-btn {
   display: flex;
   justify-content: center;
@@ -345,4 +381,14 @@ h2 {
   border-radius: 10px;
   font-size: 1.5rem;
   color: white;
+}
+
+#clear-wishlist-btn:hover{
+  opacity: 50%;
+  color: #151515;
+}
+
+#clear-wishlist-btn:focus{
+  opacity: 50%;
+  color: #151515;
 }
