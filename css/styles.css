@@ -92,13 +92,14 @@ main {
     font-size: 56px;
   }
 
+  
 }
 
 .title {
   display: flex;
   justify-content: center;
   padding: 30px;
-  margin: 20px 0 20px 0;
+  margin: 20px 20px 20px 20px;
   background-color: #4b9cd3;
   border-radius: 10px;
   font-size: 48px;
@@ -276,6 +277,7 @@ footer {
 
 h2 {
   text-align: center;
+  margin-bottom: 5px;
   border-bottom: 2px solid #151515;
   color: #151515;
 }
@@ -311,6 +313,11 @@ h2 {
 
   h2{
     font-size: 36px;
+    margin-bottom: 0px;
+  }
+
+  .title{
+    margin: 20px 100px 20px 100px;
   }
 }
 
